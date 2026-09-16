@@ -118,7 +118,8 @@
             width: 20px;
             height: 20px;
             margin-right: 12px;
-            color: #9aa0a6;
+            display: flex;
+            align-items: center;
         }
 
         .search-input {
@@ -207,6 +208,7 @@
 
         /* Mobile */
         @media (max-width: 600px) {
+
             .main {
                 padding-top: 100px;
             }
@@ -232,10 +234,14 @@
 
 <body>
 
-    <!-- Top Navigation -->
+    <!-- ============================= -->
+    <!-- TOP NAVIGATION -->
+    <!-- ============================= -->
+
     <div class="top-nav">
 
         <a href="#">Gmail</a>
+
         <a href="#">Images</a>
 
         <div class="apps">
@@ -255,10 +261,14 @@
     </div>
 
 
-    <!-- Main Content -->
+    <!-- ============================= -->
+    <!-- MAIN CONTENT -->
+    <!-- ============================= -->
+
     <main class="main">
 
         <!-- Fake Google Logo -->
+
         <div class="logo">
             <span class="blue">G</span>
             <span class="red">o</span>
@@ -269,21 +279,30 @@
         </div>
 
 
-        <!-- Search -->
+        <!-- Search Area -->
+
         <div class="search-container">
 
             <div class="search-box">
 
                 <span class="search-icon">
-                    <svg viewBox="0 0 24 24" width="20" height="20">
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        width="20"
+                        height="20">
+
                         <path
                             fill="#9aa0a6"
                             d="M9.5 3a6.5 6.5 0 1 0 4.07 11.57l4.43 4.43
                             1.41-1.41-4.43-4.43A6.5 6.5 0 0 0 9.5 3zm0
                             2a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9z">
                         </path>
+
                     </svg>
+
                 </span>
+
 
                 <input
                     type="text"
@@ -291,24 +310,33 @@
                     placeholder="Search Google or type a URL"
                 >
 
+
                 <span class="mic">🎤</span>
 
             </div>
 
 
             <!-- Buttons -->
+
             <div class="buttons">
 
                 <button
+                    type="button"
                     class="google-button"
                     onclick="performSearch()">
+
                     Google Search
+
                 </button>
 
+
                 <button
+                    type="button"
                     class="google-button"
                     onclick="feelingLucky()">
+
                     I'm Feeling Lucky
+
                 </button>
 
             </div>
@@ -317,6 +345,7 @@
 
 
         <!-- Languages -->
+
         <div class="languages">
 
             Google offered in:
@@ -332,7 +361,10 @@
     </main>
 
 
-    <!-- Footer -->
+    <!-- ============================= -->
+    <!-- FOOTER -->
+    <!-- ============================= -->
+
     <footer>
 
         <div class="country">
@@ -342,22 +374,31 @@
         <div class="footer-links">
 
             <div class="footer-left">
+
                 <a href="#">About</a>
                 <a href="#">Advertising</a>
                 <a href="#">Business</a>
                 <a href="#">How Search works</a>
+
             </div>
 
+
             <div class="footer-right">
+
                 <a href="#">Privacy</a>
                 <a href="#">Terms</a>
                 <a href="#">Settings</a>
+
             </div>
 
         </div>
 
     </footer>
 
+
+    <!-- ============================= -->
+    <!-- GOOGLE DEMO JAVASCRIPT -->
+    <!-- ============================= -->
 
     <script>
 
@@ -386,28 +427,55 @@
                 "I'm Feeling Lucky!\n\n" +
                 "This is a demo website for testing."
             );
+
         }
 
     </script>
-<script type='text/javascript'>
-	function initEmbeddedMessaging() {
-		try {
-			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
 
-			embeddedservice_bootstrap.init(
-				'00DgL00000Yxw61',
-				'agentforceWebsitetesting',
-				'https://orgfarm-55391d5721-dev-ed.develop.my.site.com/ESWagentforceWebsitetesti1789537570849',
-				{
-					scrt2URL: 'https://orgfarm-55391d5721-dev-ed.develop.my.salesforce-scrt.com'
-				}
-			);
-		} catch (err) {
-			console.error('Error loading Embedded Messaging: ', err);
-		}
-	};
-</script>
-<script type='text/javascript' src='https://orgfarm-55391d5721-dev-ed.develop.my.site.com/ESWagentforceWebsitetesti1789537570849/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+
+    <!-- ================================================= -->
+    <!-- SALESFORCE EMBEDDED MESSAGING -->
+    <!-- ================================================= -->
+
+    <script type="text/javascript">
+
+        function initEmbeddedMessaging() {
+
+            try {
+
+                embeddedservice_bootstrap.settings.language = 'en_US';
+
+                embeddedservice_bootstrap.init(
+                    '00DgL00000Yxw61',
+                    'agentforceWebsitetesting',
+                    'https://orgfarm-55391d5721-dev-ed.develop.my.site.com/ESWagentforceWebsitetesti1789537570849',
+                    {
+                        scrt2URL:
+                        'https://orgfarm-55391d5721-dev-ed.develop.my.salesforce-scrt.com'
+                    }
+                );
+
+            } catch (err) {
+
+                console.error(
+                    'Error loading Embedded Messaging: ',
+                    err
+                );
+
+            }
+
+        }
+
+    </script>
+
+
+    <!-- Salesforce Bootstrap Script -->
+
+    <script
+        type="text/javascript"
+        src="https://orgfarm-55391d5721-dev-ed.develop.my.site.com/ESWagentforceWebsitetesti1789537570849/assets/js/bootstrap.min.js"
+        onload="initEmbeddedMessaging()">
+    </script>
 
 
 </body>
