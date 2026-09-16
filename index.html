@@ -389,20 +389,25 @@
         }
 
     </script>
+<script type='text/javascript'>
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
 
-
-    <!--
-    ============================================================
-    SALESFORCE EMBEDDED MESSAGING
-    ============================================================
-
-    Paste your Salesforce Embedded Messaging code BELOW this
-    comment and BEFORE the closing </body> tag.
-
-    Do NOT change the Salesforce code after pasting it.
-
-    ============================================================
-    -->
+			embeddedservice_bootstrap.init(
+				'00DgL00000Yxw61',
+				'agentforceWebsitetesting',
+				'https://orgfarm-55391d5721-dev-ed.develop.my.site.com/ESWagentforceWebsitetesti1789537570849',
+				{
+					scrt2URL: 'https://orgfarm-55391d5721-dev-ed.develop.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+</script>
+<script type='text/javascript' src='https://orgfarm-55391d5721-dev-ed.develop.my.site.com/ESWagentforceWebsitetesti1789537570849/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
 
 
 </body>
